@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="zle_pkg",
-    version="0.0.1",
+    version="0.0.2",
     author="Zachary Escalante",
     author_email="zach.escalante@gmail.com",
     description="This a string formatting package",
