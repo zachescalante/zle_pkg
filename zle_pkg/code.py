@@ -12,3 +12,6 @@ class StringFormatting():
 
 	def lower_case(word):
 		return word.lower()
+
+if __name__=='__main__':
+	print(StringFormatting.lower_case('ABCD'))
