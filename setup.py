@@ -11,7 +11,7 @@ setuptools.setup(
     description="This a string formatting package",
     long_description="String formatting for Machine Learning input",
     long_description_content_type="text/markdown",
-    url="https://github.com/pypa/sampleproject",
+    url="https://github.com/zachescalante/zle_pkg",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
