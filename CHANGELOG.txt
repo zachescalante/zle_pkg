@@ -1,0 +1,15 @@
+2018-12-17  Zach Escalante  zach.escalante@gmail.com
+
+    * currency.py (dollar): substitute all dollar values ($123,456.78) for the token <dollar>
+
+    * currency.py (pound): substitute all dollar values (£123,456.78) for the token <pound>
+
+    * currency.py (yen): substitute all dollar values (¥123,456.78) for the token <yen>
+
+    * currency.py (euro): substitute all dollar values (€123,456.78) for the token <euro>
+
+    * test/__init__.py: I created the "test" folder for test code and data
+
+    * test_code.py (unrelated_change): I tested all the functions above in the test_code.py file
+
+
