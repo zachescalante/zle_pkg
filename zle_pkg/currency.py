@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd
 
 
-class NLPMoney():
+class CurrencyToken():
 
 	def __init__(self):
 
@@ -21,7 +21,7 @@ class NLPMoney():
 		return string
 		'''
 		# Declare re.compile syntax
-		monetary_unit = re.compile(r'[$][(0-9).,]+', re.IGNORECASE)
+		monetary_unit = re.compile(r'[$][0-9,.]+', re.IGNORECASE)
 
 		# Use the re.compile regex to subsitute string values
 		return_string = monetary_unit.sub(' <dollar> ', string)
@@ -39,7 +39,7 @@ class NLPMoney():
 		return string
 		'''
 		# Declare re.compile syntax
-		monetary_unit = re.compile(r'[€][(0-9).,]+', re.IGNORECASE)
+		monetary_unit = re.compile(r'[€][0-9,.]+', re.IGNORECASE)
 
 		# Use the re.compile regex to subsitute string values
 		return_string = monetary_unit.sub(' <euro> ', string)
@@ -57,7 +57,7 @@ class NLPMoney():
 		return string
 		'''
 		# Declare re.compile syntax
-		monetary_unit = re.compile(r'[¥][(0-9).,]+', re.IGNORECASE)
+		monetary_unit = re.compile(r'[¥][0-9,.]+', re.IGNORECASE)
 
 		# Use the re.compile regex to subsitute string values
 		return_string = monetary_unit.sub(' <yen> ', string)
@@ -75,7 +75,7 @@ class NLPMoney():
 		return string
 		'''
 		# Declare re.compile syntax
-		monetary_unit = re.compile(r'[¥][(0-9).,]+', re.IGNORECASE)
+		monetary_unit = re.compile(r'[£][0-9,.]+', re.IGNORECASE)
 
 		# Use the re.compile regex to subsitute string values
 		return_string = monetary_unit.sub(' <pound> ', string)
@@ -93,7 +93,7 @@ class NLPMoney():
 		return string
 		'''
 		# Declare re.compile syntax
-		monetary_unit = re.compile(r'[€$¥£][(0-9).,]+', re.IGNORECASE)
+		monetary_unit = re.compile(r'[€$¥£][0-9,.]+', re.IGNORECASE)
 
 		# Use the re.compile regex to subsitute string values
 		return_string = monetary_unit.sub(' <money> ', string)

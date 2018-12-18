@@ -21,7 +21,7 @@ class NLPFormatting():
 		return string
 		'''
 		# Declare re.compile syntax
-		monetary_unit = re.compile(r'[$][(0-9).,]+', re.IGNORECASE)
+		monetary_unit = re.compile(r'$[0-9,.]+', re.IGNORECASE)
 
 		# Use the re.compile regex to subsitute string values
 		return_string = monetary_unit.sub(' <dollar> ', string)
@@ -39,7 +39,7 @@ class NLPFormatting():
 		return string
 		'''
 		# Declare re.compile syntax
-		monetary_unit = re.compile(r'[€][(0-9).,]+', re.IGNORECASE)
+		monetary_unit = re.compile(r'€[0-9,.]+', re.IGNORECASE)
 
 		# Use the re.compile regex to subsitute string values
 		return_string = monetary_unit.sub(' <euro> ', string)
@@ -57,7 +57,7 @@ class NLPFormatting():
 		return string
 		'''
 		# Declare re.compile syntax
-		monetary_unit = re.compile(r'[¥][(0-9).,]+', re.IGNORECASE)
+		monetary_unit = re.compile(r'¥[0-9,.]+', re.IGNORECASE)
 
 		# Use the re.compile regex to subsitute string values
 		return_string = monetary_unit.sub(' <yen> ', string)
@@ -75,7 +75,7 @@ class NLPFormatting():
 		return string
 		'''
 		# Declare re.compile syntax
-		monetary_unit = re.compile(r'[¥][(0-9).,]+', re.IGNORECASE)
+		monetary_unit = re.compile(r'£[0-9,.]+', re.IGNORECASE)
 
 		# Use the re.compile regex to subsitute string values
 		return_string = monetary_unit.sub(' <pound> ', string)
@@ -93,7 +93,7 @@ class NLPFormatting():
 		return string
 		'''
 		# Declare re.compile syntax
-		monetary_unit = re.compile(r'[€$¥£][(0-9).,]+', re.IGNORECASE)
+		monetary_unit = re.compile(r'[€$¥£][0-9,.]+', re.IGNORECASE)
 
 		# Use the re.compile regex to subsitute string values
 		return_string = monetary_unit.sub(' <money> ', string)
@@ -121,7 +121,7 @@ if __name__=='__main__':
 	print("Output: ", nlpf.yen(string_3))
 
 	# Testing British Pound money strings
-	string_4 = 'Common stock, £0.60 par value, 3,000,000 shares authorized'
+	string_4 = 'Common stock, £0.60.00,00 par value, 3,000,000 shares authorized'
 	print("Input: ", string_4)
 	print("Output: ", nlpf.pound(string_4))
 

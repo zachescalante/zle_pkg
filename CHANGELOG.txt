@@ -13,3 +13,15 @@
     * test_code.py (unrelated_change): I tested all the functions above in the test_code.py file
 
 
+2018-12-18  Zach Escalante  zach.escalante@gmail.com
+
+    * currency.py: changed regex to be more robust for all currency functions <dollar>
+
+    * date.py: created robust date subsitution functionality ('us_day', 'us_year', 'us_month', 'us_date')
+
+    * date.py (class): changed class name from 'NLPFormatting' to 'DateToken'
+
+    * setup.py (version): updated version to 0.1.1
+
+
+

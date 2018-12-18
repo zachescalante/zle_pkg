@@ -5,11 +5,11 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="zle_pkg",
-    version="0.0.4",
+    version="0.1.1",
     author="Zachary Escalante",
     author_email="zach.escalante@gmail.com",
     description="NLP string formatting package",
-    long_description="String formatting for Machine Learning input",
+    long_description="This is my first version with operating functionality for production",
     long_description_content_type="text/markdown",
     url="https://github.com/zachescalante/zle_pkg",
     packages=setuptools.find_packages(),
