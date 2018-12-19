@@ -23,5 +23,13 @@
 
     * setup.py (version): updated version to 0.1.1
 
+2018-12-19  Zach Escalante  zach.escalante@gmail.com
+
+    * numbers.py: any numbers surrounded by periods or commas are replaced by the <number> token
+
+    * tokenize.py: one file (tokenize()) that calls 'date.py', 'currency.py' and 'numbers.py' to tokenize an entire sentence
+
+    * setup.py (version): updated version to 0.1.2
+
 
 

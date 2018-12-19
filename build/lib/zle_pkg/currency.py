@@ -1,15 +1,13 @@
 import os
 import re
 import sys
-import numpy as np
-import pandas as pd
 
 
 class CurrencyToken():
 
 	def __init__(self):
 
-		print('StringFormatting() package has been installed')
+		print('CurrencyToken() package has been installed')
 
 	def dollar(self, string):
 		'''
@@ -102,4 +100,4 @@ class CurrencyToken():
 		return return_string.lower()
 
 if __name__=='__main__':
-	main()
+	print('CurrencyToken() package has been run')
