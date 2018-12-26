@@ -31,5 +31,11 @@
 
     * setup.py (version): updated version to 0.1.2
 
+2018-12-26  Zach Escalante  zach.escalante@gmail.com
+
+	* Updated README.md file to include all documentation
+
+	* Added the 'test_code.py' file which tests all the functionality of the package
+
 
 

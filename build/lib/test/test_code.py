@@ -25,28 +25,42 @@ if __name__=='__main__':
 	print("Output: ", tc.dt.us_day(string_1))
 
 	print("Input: ", string_2)
-	print("Output: ", tc.dt.us_month(string_1))
+	print("Output: ", tc.dt.us_month(string_2))
 
 	print("Input: ", string_3)
-	print("Output: ", tc.dt.us_year(string_1))
-'''
-	# Two euro strings, one with periods and one with commas
-	string_2 = '€12345.76 see if this works €123,456,789'
-	print("Input: ", string_2)
-	print("Output: ", nlpf.euro(string_2))
+	print("Output: ", tc.dt.us_year(string_3))
 
-	# Two yen strings, one with periods and one with commas
-	string_3 = 'Common stock, ¥0.60 par value, 3,000,000 shares authorized'
 	print("Input: ", string_3)
-	print("Output: ", nlpf.yen(string_3))
+	print("Output: ", tc.dt.us_date(string_3))
 
-	# Testing British Pound money strings
-	string_4 = 'Common stock, £0.60.00,00 par value, 3,000,000 shares authorized'
+	# Test the CurrencyToken() class:
+	string_4 = 'the price of a Big Mac was $3.57 in the United States '
+	string_5 = 'the price of a Big Mac was £2.29 in the United Kingdom'
+	string_6 = 'the price of a Big Mac was ¥670.00 in the Japan'
+	string_7 = 'the price of a Big Mac was €7,00 in the Germany'
+
 	print("Input: ", string_4)
-	print("Output: ", nlpf.pound(string_4))
+	print("Output: ", tc.fx.dollar(string_4))
 
-	# Testing the money function
-	string_5 = 'dollar $123,456,789.23 pound £123,456,789 yen ¥123,456,789.98 euro €123,456,789.54'
 	print("Input: ", string_5)
-	print("Output: ", nlpf.money(string_5))
-'''
+	print("Output: ", tc.fx.pound(string_5))
+
+	print("Input: ", string_6)
+	print("Output: ", tc.fx.yen(string_6))
+
+	print("Input: ", string_7)
+	print("Output: ", tc.fx.euro(string_7))
+
+	# Test the NumberToken() class:
+	string_8 = 'The number 12.345,789.01 is my lucky number'
+
+	print("Input: ", string_8)
+	print("Output: ", tc.nmbr.number(string_8))
+
+	# Test the Tokenize() class
+	string_9 = 'On April 15th, 1985 Michael Jordan paid $2.12 for each of his 10 big macs'
+
+	print("Input: ", string_9)
+	print("Output: ", tc.tkn.tokenize(string_9))
+
+
