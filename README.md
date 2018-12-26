@@ -1,5 +1,5 @@
 
-## zle_pkg: package for text tokenization - version 1.3.0
+## zle_pkg: package for text tokenization - version 1.5.0
 ​
 ### **from zle_pkg.date import DateToken()**
 ​
