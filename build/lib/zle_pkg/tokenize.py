@@ -1,8 +1,8 @@
 import os
 import re
-from date import DateToken
-from numbers import NumberToken
-from currency import CurrencyToken
+from zle_pkg.date import DateToken
+from zle_pkg.numbers import NumberToken
+from zle_pkg.currency import CurrencyToken
 
 
 class Tokenize():

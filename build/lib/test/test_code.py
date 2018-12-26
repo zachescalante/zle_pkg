@@ -1,115 +1,35 @@
-import os
-import re
-import sys
-import numpy as np
-import pandas as pd
+from zle_pkg.date import DateToken
+from zle_pkg.numbers import NumberToken
+from zle_pkg.currency import CurrencyToken
+from zle_pkg.tokenize import Tokenize
 
 
-class NLPFormatting():
+class TestCode():
 
 	def __init__(self):
 
-		print('StringFormatting() package has been installed')
-
-	def dollar(self, string):
-		'''
-		This function takes a string input and replaces all instances 
-		of dollars signs and trailing numerica values to the '<dollar>'
-		tag
-
-		param string
-		return string
-		'''
-		# Declare re.compile syntax
-		monetary_unit = re.compile(r'$[0-9,.]+', re.IGNORECASE)
-
-		# Use the re.compile regex to subsitute string values
-		return_string = monetary_unit.sub(' <dollar> ', string)
-
-		# Return the string in lower case
-		return return_string.lower()
-
-	def euro(self, string):
-		'''
-		This function takes a string input and replaces all instances 
-		of dollars signs and trailing numerica values to the '<euro>'
-		tag
-
-		param string
-		return string
-		'''
-		# Declare re.compile syntax
-		monetary_unit = re.compile(r'€[0-9,.]+', re.IGNORECASE)
-
-		# Use the re.compile regex to subsitute string values
-		return_string = monetary_unit.sub(' <euro> ', string)
-
-		# Return the string in lower case
-		return return_string.lower()
-
-	def yen(self, string):
-		'''
-		This function takes a string input and replaces all instances 
-		of dollars signs and trailing numerica values to the '<yen>'
-		tag
-
-		param string
-		return string
-		'''
-		# Declare re.compile syntax
-		monetary_unit = re.compile(r'¥[0-9,.]+', re.IGNORECASE)
-
-		# Use the re.compile regex to subsitute string values
-		return_string = monetary_unit.sub(' <yen> ', string)
-
-		# Return the string in lower case
-		return return_string.lower()
-
-	def pound(self, string):
-		'''
-		This function takes a string input and replaces all instances 
-		of dollars signs and trailing numerica values to the '<pound>'
-		tag
-
-		param string
-		return string
-		'''
-		# Declare re.compile syntax
-		monetary_unit = re.compile(r'£[0-9,.]+', re.IGNORECASE)
-
-		# Use the re.compile regex to subsitute string values
-		return_string = monetary_unit.sub(' <pound> ', string)
-
-		# Return the string in lower case
-		return return_string.lower()
-
-	def money(self, string):
-		'''
-		This function takes a string input and replaces all instances 
-		of dollars signs and trailing numerica values to the '<money>'
-		tag
-
-		param string
-		return string
-		'''
-		# Declare re.compile syntax
-		monetary_unit = re.compile(r'[€$¥£][0-9,.]+', re.IGNORECASE)
-
-		# Use the re.compile regex to subsitute string values
-		return_string = monetary_unit.sub(' <money> ', string)
-
-		# Return the string in lower case
-		return return_string.lower()
+		self.dt = DateToken()
+		self.nmbr = NumberToken()
+		self.fx = CurrencyToken()
+		self.tkn = Tokenize()
 
 if __name__=='__main__':
 
-	nlpf = NLPFormatting()
+	tc = TestCode()
 
-	# Two money strings, one with commas and one without
-	string_1 = '$12345 see if this works $123,456,789'
+	# Test the DateToken() class:
+	string_1 = 'On July 4th, 1776 we celebrate Independance Day'
+	string_2 = 'On 07/04/1776 we celebrate Independance Day'
+	string_3 = 'On 7-04-1776 we celebrate Independance Day'
 	print("Input: ", string_1)
-	print("Output: ", nlpf.dollar(string_1))
+	print("Output: ", tc.dt.us_day(string_1))
 
+	print("Input: ", string_2)
+	print("Output: ", tc.dt.us_month(string_1))
+
+	print("Input: ", string_3)
+	print("Output: ", tc.dt.us_year(string_1))
+'''
 	# Two euro strings, one with periods and one with commas
 	string_2 = '€12345.76 see if this works €123,456,789'
 	print("Input: ", string_2)
@@ -129,3 +49,4 @@ if __name__=='__main__':
 	string_5 = 'dollar $123,456,789.23 pound £123,456,789 yen ¥123,456,789.98 euro €123,456,789.54'
 	print("Input: ", string_5)
 	print("Output: ", nlpf.money(string_5))
+'''
