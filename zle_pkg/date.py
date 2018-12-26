@@ -2,15 +2,26 @@ import re
 
 
 class DateToken():
+    """
+    The DateToken() class contains all functions pertaining too date tokenization
+    """
 
     def __init__(self):
 
+        """
+        Declare all the month variables (long + shorthand) for use in regex expressions
+        """
         self.months = "january|february|march|april|may|june|july|august"\
                       "|september|october|november|december|jan|feb|mar|may"\
                       "|jun|jul|aug|sep|sept|oct|nov|dec"
 
     def us_month(self, date_string):
+        """
+        Replace any month in US date format with the <month> token surrounded by spaces
 
+        param string
+        return string (<token>)
+        """
         date_string = date_string.lower()
 
         month_backslash = re.compile(r'\s+\d{1,2}/', re.IGNORECASE)
@@ -29,7 +40,12 @@ class DateToken():
         return date_string
     
     def us_day(self, date_string):
+        """
+        Replace any day in US date format with the <day> token
 
+        param string
+        return string (<day>)
+        """
         date_string = date_string.lower()
 
         day_backslash = re.compile(r'/\d{1,2}/', re.IGNORECASE)
@@ -48,7 +64,12 @@ class DateToken():
         return date_string
 
     def us_year(self, date_string):
+        """
+        Replace any year in US date format with the <year> token
 
+        param string
+        return string (<year>)
+        """
         date_string = date_string.lower()
 
         year_backslash = re.compile(r'/\d{2,4}(?!\/)', re.IGNORECASE)
@@ -67,6 +88,12 @@ class DateToken():
         return date_string
 
     def us_date(self, date_string):
+        """
+        Replace any date in US date format with the <date> token
+
+        param string
+        return string (<date>)
+        """
 
         date_string = date_string.lower()
 
@@ -87,5 +114,5 @@ class DateToken():
 
 
 if __name__ == '__main__':
-    main()
+    print('DateToken() package has been installed')
     

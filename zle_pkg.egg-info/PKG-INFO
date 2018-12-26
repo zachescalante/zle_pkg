@@ -1,12 +1,12 @@
 Metadata-Version: 2.1
 Name: zle-pkg
-Version: 0.1.2
+Version: 0.1.3
 Summary: NLP string formatting package
 Home-page: https://github.com/zachescalante/zle_pkg
 Author: Zachary Escalante
 Author-email: zach.escalante@gmail.com
 License: UNKNOWN
-Description: This is my first version with operating functionality for production
+Description: see README.md
 Platform: UNKNOWN
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License

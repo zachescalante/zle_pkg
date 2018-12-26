@@ -10,14 +10,14 @@ class CurrencyToken():
 		print('CurrencyToken() package has been installed')
 
 	def dollar(self, string):
-		'''
+		"""
 		This function takes a string input and replaces all instances 
 		of dollars signs and trailing numerica values to the '<dollar>'
 		tag
 
 		param string
-		return string
-		'''
+		return string (<dollar>)
+		"""
 		# Declare re.compile syntax
 		monetary_unit = re.compile(r'[$][0-9,.]+', re.IGNORECASE)
 
@@ -28,14 +28,14 @@ class CurrencyToken():
 		return return_string.lower()
 
 	def euro(self, string):
-		'''
+		"""
 		This function takes a string input and replaces all instances 
-		of dollars signs and trailing numerica values to the '<euro>'
+		of euro signs and trailing numeric values to the '<euro>'
 		tag
 
 		param string
-		return string
-		'''
+		return string (<euro>)
+		"""
 		# Declare re.compile syntax
 		monetary_unit = re.compile(r'[€][0-9,.]+', re.IGNORECASE)
 
@@ -48,11 +48,11 @@ class CurrencyToken():
 	def yen(self, string):
 		'''
 		This function takes a string input and replaces all instances 
-		of dollars signs and trailing numerica values to the '<yen>'
+		of yen signs and trailing numerica values to the '<yen>'
 		tag
 
 		param string
-		return string
+		return string (<yen>)
 		'''
 		# Declare re.compile syntax
 		monetary_unit = re.compile(r'[¥][0-9,.]+', re.IGNORECASE)
@@ -64,14 +64,14 @@ class CurrencyToken():
 		return return_string.lower()
 
 	def pound(self, string):
-		'''
+		"""
 		This function takes a string input and replaces all instances 
-		of dollars signs and trailing numerica values to the '<pound>'
+		of pound signs and trailing numerica values to the '<pound>'
 		tag
 
 		param string
-		return string
-		'''
+		return string (<pound>)
+		"""
 		# Declare re.compile syntax
 		monetary_unit = re.compile(r'[£][0-9,.]+', re.IGNORECASE)
 
@@ -82,14 +82,14 @@ class CurrencyToken():
 		return return_string.lower()
 
 	def money(self, string):
-		'''
+		"""
 		This function takes a string input and replaces all instances 
-		of dollars signs and trailing numerica values to the '<money>'
+		of dollar/pound/yen/euro signs and trailing numerica values to the '<money>'
 		tag
 
 		param string
-		return string
-		'''
+		return string (<money>)
+		"""
 		# Declare re.compile syntax
 		monetary_unit = re.compile(r'[€$¥£][0-9,.]+', re.IGNORECASE)
 
@@ -100,4 +100,4 @@ class CurrencyToken():
 		return return_string.lower()
 
 if __name__=='__main__':
-	print('CurrencyToken() package has been run')
+	print('CurrencyToken() package has been installed')

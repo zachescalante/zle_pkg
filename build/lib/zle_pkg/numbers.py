@@ -11,11 +11,11 @@ class NumberToken():
 	def number(self, string):
 		'''
 		This function takes a string input and replaces all instances 
-		of dollars signs and trailing numerica values to the '<dollar>'
+		of numeric data and trailing numeric values to the '<numeric>'
 		tag
 
 		param string
-		return string
+		return string (<numeric>)
 		'''
 		# Declare re.compile syntax
 		monetary_unit = re.compile(r'[0-9,.]+', re.IGNORECASE)
@@ -27,4 +27,4 @@ class NumberToken():
 		return return_string.lower()
 
 if __name__=='__main__':
-	main()
+	print('NumberToken() package has been installed')
