@@ -5,7 +5,7 @@ from zle_pkg.numbers import NumberToken
 from zle_pkg.currency import CurrencyToken
 
 
-class Tokenize():
+class Tokenize:
 
 	'''
 	def __init__(self):
@@ -43,4 +43,4 @@ class Tokenize():
 
 if __name__=='__main__':
 
-	print(Tokenize().tokenize("let's try this $123,456.789 currency with this January 1st, 2014 date and these 12,34,5.8.0 numbers"))
+	print(Tokenize.tokenize("let's try this $123,456.789 currency with this January 1st, 2014 date and these 12,34,5.8.0 numbers"))
