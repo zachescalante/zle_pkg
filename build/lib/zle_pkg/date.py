@@ -118,7 +118,7 @@ class DateToken:
         if re.search('(' + cls.MONTHS + ')' + '\s*\d+(st|nd|rd|th)(,|.)\s*\d{2,4}', date_string):
             date_string = date_name.sub(' <date> ', date_string)
 
-        return cls(date_string)
+        return date_string
 
 
 if __name__ == '__main__':
