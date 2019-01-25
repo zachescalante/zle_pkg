@@ -7,11 +7,14 @@ from zle_pkg.currency import CurrencyToken
 
 class Tokenize():
 
+	'''
 	def __init__(self):
 
 		print('Tokenize() package has been installed')
+	'''
 
-	def tokenize(self, string):
+	@classmethod
+	def tokenize(cls, string):
 		'''
 		This function takes a string input and executes three functions:
 
@@ -28,13 +31,13 @@ class Tokenize():
 		# 1. exchange all currency symbols for the <money> token
 		currency_symbols = re.compile(r'[€$¥£]')
 		if currency_symbols.findall(string):
-			string = CurrencyToken().money(string)
+			string = CurrencyToken.money(string)
 
 		# 2. exchange all date values for the <date> token
-		string = DateToken().us_date(string)
+		string = DateToken.us_date(string)
 
 		#3. exchange all number values for the <number> token
-		string = NumberToken().number(string)
+		string = NumberToken.number(string)
 
 		return string
 

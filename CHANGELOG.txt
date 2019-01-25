@@ -37,5 +37,11 @@
 
 	* Added the 'test_code.py' file which tests all the functionality of the package
 
+2019-01-25  Zach Escalante  zach.escalante@gmail.com
+
+    * Implemented @classmethod functionality so that we don't have to initialize a class object every function call
+
+    * Edited the test_cody.py file to call functions with @classmethod syntax
+
 
 
