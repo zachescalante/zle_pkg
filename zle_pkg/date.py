@@ -1,7 +1,7 @@
 import re
 
 
-class DateToken():
+class DateToken:
     """
     The DateToken() class contains all functions pertaining too date tokenization
     """

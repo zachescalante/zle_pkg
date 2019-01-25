@@ -1,7 +1,7 @@
 import re
 
 
-class DateToken():
+class DateToken:
     """
     The DateToken() class contains all functions pertaining too date tokenization
     """
@@ -31,7 +31,7 @@ class DateToken():
 
         month_backslash = re.compile(r'\s+\d{1,2}/', re.IGNORECASE)
         month_dash = re.compile(r'\s+\d{1,2}-', re.IGNORECASE)
-        month_name = re.compile(MONTHS)
+        month_name = re.compile(cls.MONTHS)
 
         if re.search(r'\d{1,2}/\d{1,2}/\d{2,4}', date_string):
             date_string = month_backslash.sub(' <month> ', date_string)
@@ -39,7 +39,7 @@ class DateToken():
         if re.search(r'\d{1,2}-\d{1,2}-\d{2,4}', date_string):
             date_string = month_dash.sub(' <month> ', date_string)
 
-        if re.search('(' + MONTHS + ')', date_string):
+        if re.search('(' + cls.MONTHS + ')', date_string):
             date_string = month_name.sub(' <month> ', date_string)
 
         return date_string
@@ -64,7 +64,7 @@ class DateToken():
         if re.search(r'\d{1,2}-\d{1,2}-\d{2,4}', date_string):
             date_string = day_dash.sub(' <day> ', date_string)
 
-        if re.search('(' + MONTHS + ')' + '\s*\d+(st|nd|rd|th)', date_string):
+        if re.search('(' + cls.MONTHS + ')' + '\s*\d+(st|nd|rd|th)', date_string):
             date_string = day_name.sub(' <day> ', date_string)
 
         return date_string
@@ -89,7 +89,7 @@ class DateToken():
         if re.search(r'\d{1,2}-\d{1,2}-\d{2,4}', date_string):
             date_string = year_dash.sub(' <year> ', date_string)
 
-        if re.search('(' + MONTHS + ')' + '\s*\d+(st|nd|rd|th)(,|.)\s*\d{2,4}', date_string):
+        if re.search('(' + cls.MONTHS + ')' + '\s*\d+(st|nd|rd|th)(,|.)\s*\d{2,4}', date_string):
             date_string = year_name.sub(' <year> ', date_string)
 
         return date_string
@@ -107,7 +107,7 @@ class DateToken():
 
         date_backslash = re.compile(r'\d{1,2}/\d{1,2}/\d{2,4}', re.IGNORECASE)
         date_dash = re.compile(r'\d{1,2}-\d{1,2}-\d{2,4}', re.IGNORECASE)
-        date_name = re.compile(r'(' + MONTHS + ')' + '\s*\d+(st|nd|rd|th)(,|.)\s*\d{2,4}')
+        date_name = re.compile(r'(' + cls.MONTHS + ')' + '\s*\d+(st|nd|rd|th)(,|.)\s*\d{2,4}')
 
         if re.search(r'\d{1,2}/\d{1,2}/\d{2,4}', date_string):
             date_string = date_backslash.sub(' <date> ', date_string)
@@ -115,7 +115,7 @@ class DateToken():
         if re.search(r'\d{1,2}-\d{1,2}-\d{2,4}', date_string):
             date_string = date_dash.sub(' <date> ', date_string)
 
-        if re.search('(' + MONTHS + ')' + '\s*\d+(st|nd|rd|th)(,|.)\s*\d{2,4}', date_string):
+        if re.search('(' + cls.MONTHS + ')' + '\s*\d+(st|nd|rd|th)(,|.)\s*\d{2,4}', date_string):
             date_string = date_name.sub(' <date> ', date_string)
 
         return cls(date_string)
