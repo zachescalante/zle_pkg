@@ -5,11 +5,14 @@ import sys
 
 class CurrencyToken():
 
+	'''
 	def __init__(self):
 
 		print('CurrencyToken() package has been installed')
+	'''
 
-	def dollar(self, string):
+	@classmethod
+	def dollar(cls, string):
 		"""
 		This function takes a string input and replaces all instances 
 		of dollars signs and trailing numerica values to the '<dollar>'
@@ -27,7 +30,8 @@ class CurrencyToken():
 		# Return the string in lower case
 		return return_string.lower()
 
-	def euro(self, string):
+	@classmethod
+	def euro(cls, string):
 		"""
 		This function takes a string input and replaces all instances 
 		of euro signs and trailing numeric values to the '<euro>'
@@ -44,8 +48,8 @@ class CurrencyToken():
 
 		# Return the string in lower case
 		return return_string.lower()
-
-	def yen(self, string):
+	@classmethod
+	def yen(cls, string):
 		'''
 		This function takes a string input and replaces all instances 
 		of yen signs and trailing numerica values to the '<yen>'
@@ -63,7 +67,8 @@ class CurrencyToken():
 		# Return the string in lower case
 		return return_string.lower()
 
-	def pound(self, string):
+	@classmethod
+	def pound(cls, string):
 		"""
 		This function takes a string input and replaces all instances 
 		of pound signs and trailing numerica values to the '<pound>'
@@ -81,7 +86,8 @@ class CurrencyToken():
 		# Return the string in lower case
 		return return_string.lower()
 
-	def money(self, string):
+	@classmethod
+	def money(cls, string):
 		"""
 		This function takes a string input and replaces all instances 
 		of dollar/pound/yen/euro signs and trailing numerica values to the '<money>'
@@ -100,4 +106,9 @@ class CurrencyToken():
 		return return_string.lower()
 
 if __name__=='__main__':
+
+	'''
+	Run this code to make sure the package has been installed
+
 	print('CurrencyToken() package has been installed')
+	'''

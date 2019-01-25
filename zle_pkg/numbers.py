@@ -4,11 +4,14 @@ import re
 
 class NumberToken():
 
+	'''
 	def __init__(self):
 
 		print('NumberToken() package has been installed')
+	'''
 
-	def number(self, string):
+	@classmethod
+	def number(cls, string):
 		'''
 		This function takes a string input and replaces all instances 
 		of numeric data and trailing numeric values to the '<numeric>'
@@ -27,4 +30,9 @@ class NumberToken():
 		return return_string.lower()
 
 if __name__=='__main__':
+
+	'''
+	Run this to make sure the NumberToken() package has been installed
+
 	print('NumberToken() package has been installed')
+	'''
